@@ -129,7 +129,7 @@ public class ListBasics {
         // OK then, what happens if we do this? Try running this main method and
         // see what happens:
 
-        String willNotWork = magicWords.get(magicWords.size());
+        //String willNotWork = magicWords.get(magicWords.size());
 
         // If you run it the code, note that the program stops here, and none
         // of the lines below will run!
@@ -158,7 +158,7 @@ public class ListBasics {
         // Java also gives us the ability to _change_ what's in a list! Here’s
         // how you add a new element to the end of the list:
 
-        magicWords.add("expelliarmus");
+        //magicWords.add("expelliarmus");
 
         // Oops! What happened?! That code compiles. Why doesn't it run?
         //
@@ -175,13 +175,21 @@ public class ListBasics {
         // immutable; you can't make the number 2 grow bigger! Strings in Java
         // are immutable; to change a string, you have to make a new String.
         // This is what the String addition operator does:
+        String n = "what";
+        String m = "why";
+        m = n;
+        n = m.replace("w","L");//n is no longer the alliace with m from this step
+        //because this step create a new string for n
+        System.out.println(m);
+        System.out.println(n);
 
         String thing0 = "Mac";
         String thing1 = thing0;
         System.out.println("thing0 = " + thing0);  // Now they're both "Mac"
         System.out.println("thing1 = " + thing1);
 
-        thing1 += "alester";
+        thing1 += "alester";//thing1 does not point to the same thing as thing0 from this step,
+        // because we create a new string for thing1 to point to.
         System.out.println("thing1 = " + thing1);  // Now it's the new value "Macalester", but
         System.out.println("thing0 = " + thing0);  // this one is still "Mac"
 
